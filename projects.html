@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Anu Sinha | Projects</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --card-bg: #ffffff;
+      --border: #e1e4ea;
+      --accent: #1f3f78;
+      --accent-soft: #eef2fb;
+      --text-main: #111827;
+      --text-muted: #6b7280;
+      --radius-card: 14px;
+      --radius-pill: 999px;
+      --shadow-soft: 0 12px 25px rgba(15, 23, 42, 0.08);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text-main);
+      padding: 24px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container { width: 100%; max-width: 960px; }
+
+    header { margin-bottom: 18px; }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    header p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+
+    .nav {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: var(--accent);
+      background: var(--accent-soft);
+      padding: 8px 12px;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--border);
+      font-size: 0.9rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    @media (max-width: 760px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: var(--radius-card);
+      border: 1px solid var(--border);
+      padding: 20px;
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 210px;
+    }
+
+    .tagrow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0 14px;
+    }
+
+    .tag {
+      font-size: 0.78rem;
+      padding: 6px 10px;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--border);
+      background: #fff;
+      color: var(--text-muted);
+    }
+
+    .card h2 { font-size: 1.1rem; margin-bottom: 6px; }
+    .card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.55; }
+
+    .actions {
+      margin-top: 16px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 9px 14px;
+      border-radius: var(--radius-pill);
+      text-decoration: none;
+      font-size: 0.9rem;
+      border: 1px solid var(--border);
+      color: var(--accent);
+      background: #fff;
+    }
+
+    .btn.primary {
+      background: #1f4fd6;
+      color: #fff;
+      border: 1px solid #1f4fd6;
+    }
+
+    .btn.primary:hover { background: #173faa; border-color: #173faa; }
+    .btn:hover { background: var(--accent-soft); }
+
+    .note {
+      margin-top: 18px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Projects</h1>
+      <p>Selected work across AI-in-economics research and applied analytics.</p>
+
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="case-studies.html">Case Studies (MGMT 609)</a>
+        <a href="resume.pdf" target="_blank" rel="noopener">Resume</a>
+      </nav>
+    </header>
+
+    <section class="grid">
+      <!-- Flagship Project -->
+      <div class="card">
+        <div>
+          <h2>AI in Economics — Industry Analysis Portfolio</h2>
+          <p>
+            A public-facing project where I analyzed an industry through an economics + AI lens,
+            combining research, visualization, and decision-oriented insights.
+          </p>
+
+          <div class="tagrow">
+            <span class="tag">Industry Analysis</span>
+            <span class="tag">AI Use Cases</span>
+            <span class="tag">Data Visualization</span>
+            <span class="tag">Business Insights</span>
+          </div>
+        </div>
+
+        <div class="actions">
+          <a class="btn primary" href="https://anusinha18.github.io/490AI-Anu-SInha/" target="_blank" rel="noopener">
+            View Live Site
+          </a>
+          <a class="btn" href="case-studies.html">View MGMT 609 Case Studies</a>
+        </div>
+      </div>
+
+      <!-- Placeholder for next project (we'll fill later) -->
+      <div class="card">
+        <div>
+          <h2>More Projects Coming</h2>
+          <p>
+            I’m adding additional business analytics projects and case studies from MGMT 609,
+            including forecasting, dashboards, and data-driven recommendations.
+          </p>
+
+          <div class="tagrow">
+            <span class="tag">Forecasting</span>
+            <span class="tag">Regression</span>
+            <span class="tag">Dashboards</span>
+            <span class="tag">Decision Making</span>
+          </div>
+        </div>
+
+        <div class="actions">
+          <a class="btn primary" href="case-studies.html">Go to Case Studies</a>
+          <a class="btn" href="index.html">Back to Home</a>
+        </div>
+      </div>
+    </section>
+
+    <p class="note">
+      Next: we’ll build <strong>case-studies.html</strong> to showcase MGMT 609 projects in a recruiter-friendly format.
+    </p>
+  </div>
+</body>
+
+</html>
