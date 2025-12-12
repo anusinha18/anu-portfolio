@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Anu Sinha | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --card-bg: #ffffff;
+      --border: #e1e4ea;
+      --accent: #1f3f78;
+      --accent-soft: #eef2fb;
+      --text-main: #111827;
+      --text-muted: #6b7280;
+      --radius-card: 14px;
+      --radius-pill: 999px;
+      --shadow-soft: 0 12px 25px rgba(15, 23, 42, 0.08);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text-main);
+      padding: 24px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container { width: 100%; max-width: 960px; }
+
+    header { margin-bottom: 18px; }
+
+    header h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    header p {
+      font-size: 0.98rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .nav {
+      margin-top: 12px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: var(--accent);
+      background: var(--accent-soft);
+      padding: 8px 12px;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--border);
+      font-size: 0.9rem;
+    }
+
+    .about-card {
+      background: var(--card-bg);
+      border-radius: var(--radius-card);
+      border: 1px solid var(--border);
+      padding: 20px;
+      margin-top: 16px;
+      box-shadow: var(--shadow-soft);
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 18px;
+      align-items: center;
+    }
+
+    @media (max-width: 700px) { .about-card { grid-template-columns: 1fr; } }
+
+    .profile-photo {
+      width: 160px;
+      height: 160px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #cbd5f5, #e0f2fe);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 1.05rem;
+      overflow: hidden;
+    }
+
+    .profile-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .about-text h2 { font-size: 1.15rem; margin-bottom: 8px; }
+    .about-text p { font-size: 0.94rem; line-height: 1.6; color: var(--text-muted); margin-bottom: 8px; }
+
+    .quick-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .button-link {
+      display: inline-block;
+      padding: 9px 18px;
+      border-radius: var(--radius-pill);
+      background: #1f4fd6;
+      color: #fff;
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-decoration: none;
+      box-shadow: 0 10px 22px rgba(31, 79, 214, 0.25);
+      transition: background 0.15s ease, transform 0.12s ease, box-shadow 0.12s ease;
+    }
+
+    .button-link:hover {
+      background: #173faa;
+      transform: translateY(-1px);
+      box-shadow: 0 14px 28px rgba(15, 46, 120, 0.35);
+    }
+
+    .button-link.secondary {
+      background: #ffffff;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      box-shadow: none;
+    }
+
+    .button-link.secondary:hover {
+      background: var(--accent-soft);
+      box-shadow: 0 10px 22px rgba(31, 79, 214, 0.18);
+    }
+
+    .cards-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-top: 22px;
+    }
+
+    @media (max-width: 700px) { .cards-row { grid-template-columns: 1fr; } }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: var(--radius-card);
+      border: 1px solid var(--border);
+      padding: 20px;
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 170px;
+    }
+
+    .card-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--accent-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+      font-size: 1.2rem;
+      color: var(--accent);
+    }
+
+    .card h3 { font-size: 1.05rem; margin-bottom: 6px; }
+    .card p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 10px; }
+
+    .footnote {
+      margin-top: 18px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Anu Sinha</h1>
+      <p>Business Analytics • Economics • AI • Data-driven decision-making (UMass Amherst, May 2026)</p>
+
+      <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="case-studies.html">Case Studies (MGMT 609)</a>
+        <a href="resume.pdf" target="_blank" rel="noopener">Resume</a>
+      </div>
+    </header>
+
+    <section class="about-card">
+      <div class="profile-photo">
+        <!-- If you don't want a photo yet, delete the <img> line and type "Profile Photo" -->
+        <img src="profile.jpg" alt="Photo of Anu Sinha" />
+      </div>
+
+      <div class="about-text">
+        <h2>About</h2>
+        <p>
+          I’m Anu — a Managerial Economics major with a Computer Science minor. I build analytics projects and
+          case studies that turn data into clear business recommendations.
+        </p>
+        <p>
+          This portfolio highlights my AI-in-economics work, plus business analytics projects from MGMT 609
+          (forecasting, dashboards, and data-driven decision making).
+        </p>
+
+        <div class="quick-links">
+          <a class="button-link" href="projects.html">View Projects</a>
+          <a class="button-link secondary" href="case-studies.html">View MGMT 609 Case Studies</a>
+          <!-- Link to your OLD AI class site (keep it separate) -->
+          <a class="button-link secondary" href="https://anusinha18.github.io/490AI-Anu-SInha/" target="_blank" rel="noopener">
+            AI in Economics (Class Site)
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="cards-row">
+      <div class="card">
+        <div>
+          <div class="card-icon">📄</div>
+          <h3>Resume</h3>
+          <p>My experience, leadership, and analytics skill set in one page.</p>
+        </div>
+        <a href="resume.pdf" class="button-link" target="_blank" rel="noopener">View Resume</a>
+      </div>
+
+      <div class="card">
+        <div>
+          <div class="card-icon">📁</div>
+          <h3>Projects</h3>
+          <p>Flagship work (AI in Economics) + additional analytics projects.</p>
+        </div>
+        <a href="projects.html" class="button-link">View Projects</a>
+      </div>
+    </section>
+
+    <p class="footnote">
+      Tip: If profile.jpg or resume.pdf aren’t uploaded yet, the links will show “404” until you add those files to this repo.
+    </p>
+  </div>
+</body>
+</html>
