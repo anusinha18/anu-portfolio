@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Anu Sinha | Case Studies (MGMT 609)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --card-bg: #ffffff;
+      --border: #e1e4ea;
+      --accent: #1f3f78;
+      --accent-soft: #eef2fb;
+      --text-main: #111827;
+      --text-muted: #6b7280;
+      --radius-card: 14px;
+      --radius-pill: 999px;
+      --shadow-soft: 0 12px 25px rgba(15, 23, 42, 0.08);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text-main);
+      padding: 24px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container { width: 100%; max-width: 960px; }
+
+    header { margin-bottom: 18px; }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    header p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+
+    .nav {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: var(--accent);
+      background: var(--accent-soft);
+      padding: 8px 12px;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--border);
+      font-size: 0.9rem;
+    }
+
+    .section-title {
+      margin: 18px 0 10px;
+      font-size: 1.05rem;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: var(--radius-card);
+      border: 1px solid var(--border);
+      padding: 18px 18px 16px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .card h2 {
+      font-size: 1.1rem;
+      margin-bottom: 6px;
+    }
+
+    .meta {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin: 10px 0 14px;
+    }
+
+    .pill {
+      font-size: 0.78rem;
+      padding: 6px 10px;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--border);
+      background: #fff;
+      color: var(--text-muted);
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 170px 1fr;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 760px) {
+      .row { grid-template-columns: 1fr; }
+    }
+
+    .label {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .value {
+      font-size: 0.92rem;
+      color: var(--text-main);
+      line-height: 1.55;
+    }
+
+    .actions {
+      margin-top: 12px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 9px 14px;
+      border-radius: var(--radius-pill);
+      text-decoration: none;
+      font-size: 0.9rem;
+      border: 1px solid var(--border);
+      color: var(--accent);
+      background: #fff;
+    }
+
+    .btn.primary {
+      background: #1f4fd6;
+      color: #fff;
+      border: 1px solid #1f4fd6;
+    }
+
+    .btn.primary:hover { background: #173faa; border-color: #173faa; }
+    .btn:hover { background: var(--accent-soft); }
+
+    .note {
+      margin-top: 16px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin: 14px 0 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Case Studies (MGMT 609)</h1>
+      <p>
+        Business analytics case studies focused on turning data into decisions — forecasting,
+        KPIs, dashboards, and actionable recommendations.
+      </p>
+
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="case-studies.html">Case Studies (MGMT 609)</a>
+        <a href="resume.pdf" target="_blank" rel="noopener">Resume</a>
+      </nav>
+    </header>
+
+    <div class="section-title">Featured Case Studies</div>
+
+    <section class="grid">
+
+      <!-- Case Study 1 (Template) -->
+      <article class="card">
+        <h2>Streaming Demand Signal → Revenue Forecasting (Netflix vs Disney+)</h2>
+
+        <div class="meta">
+          <span class="pill">Regression</span>
+          <span class="pill">Forecasting</span>
+          <span class="pill">Google Trends</span>
+          <span class="pill">Revenue (Quarterly)</span>
+        </div>
+
+        <div class="row">
+          <div class="label">Business Question</div>
+          <div class="value">Can online search interest help predict future revenue growth for streaming companies?</div>
+        </div>
+
+        <div class="row">
+          <div class="label">Data & Tools</div>
+          <div class="value">Google Trends, quarterly revenue data, Excel/Python, regression modeling, visualizations</div>
+        </div>
+
+        <div class="row">
+          <div class="label">What I Did</div>
+          <div class="value">
+            • Collected and cleaned revenue + search trend data<br />
+            • Built a regression model to test whether interest leads revenue<br />
+            • Interpreted results and translated them into a business recommendation
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="label">Key Insight</div>
+          <div class="value">
+            Search interest can act as an early demand signal, but strength of the relationship varies by company and time period.
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="label">Recommendation</div>
+          <div class="value">
+            Use search trends as a supplementary forecasting signal to inform marketing allocation and quarterly planning.
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="actions">
+          <!-- Replace links later -->
+          <a class="btn primary" href="#" title="Add your slide link here">Slides (add link)</a>
+          <a class="btn" href="#" title="Add a PDF/report link here">Report (add link)</a>
+          <a class="btn" href="#" title="Optional: add code or notebook link">Code (optional)</a>
+        </div>
+      </article>
+
+      <!-- Case Study 2 Placeholder -->
+      <article class="card">
+        <h2>Case Study #2 (Coming Soon)</h2>
+
+        <div class="meta">
+          <span class="pill">Dashboard</span>
+          <span class="pill">KPIs</span>
+          <span class="pill">Excel</span>
+        </div>
+
+        <div class="row">
+          <div class="label">Business Question</div>
+          <div class="value">[Add your business question]</div>
+        </div>
+
+        <div class="row">
+          <div class="label">Data & Tools</div>
+          <div class="value">[Add tools: Excel / SQL / Power BI / Python]</div>
+        </div>
+
+        <div class="row">
+          <div class="label">Key Insight</div>
+          <div class="value">[1 sentence insight]</div>
+        </div>
+
+        <div class="row">
+          <div class="label">Recommendation</div>
+          <div class="value">[1 sentence recommendation]</div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="actions">
+          <a class="btn primary" href="#">Slides (add link)</a>
+          <a class="btn" href="#">Report (add link)</a>
+        </div>
+      </article>
+
+    </section>
+
+    <p class="note">
+      Next: you’ll tell me your MGMT 609 project titles + links (Slides/PDF), and I’ll fill these in cleanly.
+    </p>
+  </div>
+</body>
+
+</html>
